@@ -1,0 +1,76 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  animation: gradientShift 15s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.auth-container {
+  background: white;
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 420px;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toggle-auth {
+  text-align: center;
+  margin-top: 24px;
+  color: #718096;
+  font-size: 0.95rem;
+}
+
+.toggle-auth .link-btn {
+  margin-left: 5px;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #5b6eff;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: none;
+}
+
+.link-btn:hover {
+  color: #4a5ae8;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 32px 24px;
+    border-radius: 12px;
+  }
+}
